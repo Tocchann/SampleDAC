@@ -42,6 +42,21 @@
       <RefTargetDir>INSTALLFOLDER</RefTargetDir>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MSMs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MSMs\Microsoft_VC140_CRT_x64.msm" />
+    <Content Include="MSMs\Microsoft_VC140_CRT_x86.msm" />
+    <Content Include="MSMs\Microsoft_VC140_DebugCRT_x64.msm" />
+    <Content Include="MSMs\Microsoft_VC140_DebugCRT_x86.msm" />
+    <Content Include="MSMs\Microsoft_VC140_DebugMFC_x64.msm" />
+    <Content Include="MSMs\Microsoft_VC140_DebugMFC_x86.msm" />
+    <Content Include="MSMs\Microsoft_VC140_MFCLOC_x64.msm" />
+    <Content Include="MSMs\Microsoft_VC140_MFCLOC_x86.msm" />
+    <Content Include="MSMs\Microsoft_VC140_MFC_x64.msm" />
+    <Content Include="MSMs\Microsoft_VC140_MFC_x86.msm" />
+  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
