@@ -6,8 +6,8 @@
 #define IDP_OLE_INIT_FAILED             100
 #define IDR_MAINFRAME                   128
 #define IDR_MfcAppTYPE                  130
-#define ID_32771                        32771
-#define IDM_TEST                        32772
+#define IDM_DISP_EXT                    32771
+#define IDM_LISTUP_KNOWNFOLDERID        32772
 
 // Next default values for new objects
 // 

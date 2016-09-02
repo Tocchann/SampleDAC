@@ -43,7 +43,7 @@ BOOL CMfcAppDoc::OnNewDocument()
 		return FALSE;
 	if (!m_viewList.IsEmpty())
 	{
-		reinterpret_cast<CEditView*>(m_viewList.GetHead())->SetWindowText( theApp.value );
+		reinterpret_cast<CEditView*>(m_viewList.GetHead())->SetWindowText( NULL );
 	}
 
 	// TODO: ‚±‚ÌˆÊ’u‚ÉÄ‰Šú‰»ˆ—‚ğ’Ç‰Á‚µ‚Ä‚­‚¾‚³‚¢B

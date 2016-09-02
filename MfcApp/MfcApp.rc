@@ -142,7 +142,8 @@ BEGIN
         MENUITEM "ツール バー(&T)",                  ID_VIEW_TOOLBAR
         MENUITEM "ステータス バー(&S)",                ID_VIEW_STATUS_BAR
         MENUITEM SEPARATOR
-        MENUITEM "&Test",                       IDM_TEST
+        MENUITEM "拡張子関連付けの表示(&E)",              IDM_DISP_EXT
+        MENUITEM "KnownFolerIDの列挙(&F)",         IDM_LISTUP_KNOWNFOLDERID
     END
     POPUP "ヘルプ(&H)"
     BEGIN

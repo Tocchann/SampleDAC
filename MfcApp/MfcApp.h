@@ -25,8 +25,6 @@ public:
 	virtual BOOL InitInstance();
 	virtual int ExitInstance();
 
-	CString value;
-
 // ŽÀ‘•
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()

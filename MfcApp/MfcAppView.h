@@ -40,7 +40,8 @@ protected:
 protected:
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnTest();
+	afx_msg void OnDispExt();
+	afx_msg void OnListupKnownfolderid();
 };
 
 #ifndef _DEBUG  // MfcAppView.cpp のデバッグ バージョン
