@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<?if $(var.Platform) = x64?>
+		<?define PlatformProgramFilesFolder="ProgramFiles64Folder"?>
+	<?else?>
+		<?define PlatformProgramFilesFolder="ProgramFilesFolder"?>
+	<?endif?>
+	<Product Id="*" Name="SetupMfcApp" Version="1.0.0.0" Manufacturer="Tocchann" UpgradeCode="1bcb73e2-0b21-4353-920e-c1ba8501db62" Codepage="932" Language="1041">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" SummaryCodepage="932" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate />
+
+		<Feature Id="ProductFeature" Title="SetupMfcApp" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="$(var.PlatformProgramFilesFolder)">
+				<Directory Id="INSTALLFOLDER" Name="MfcApp" />
+			</Directory>
+			<Directory Id="ProgramMenuFolder" SourceName="Menu">
+				<Directory Id="MenuApp" Name="MfcApp"/>
+			</Directory>
+		</Directory>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+			<Component Id="MfcApp.exe" Guid="BD4CE6BD-DC78-47A8-8C94-BA771A126DD6">
+				<File Source="$(var.MfcApp.TargetPath)" KeyPath="yes" />
+				<ProgId Id="MfcApp.Document" Description="MfcApp ファイル" Icon="MfcAppDoc.ico" Advertise="yes">
+					<Extension Id="mfcapp" Advertise="yes">
+						<Verb Id="Open" Argument="&quot;%1&quot;" />
+					</Extension>
+				</ProgId>
+				<Shortcut Id="MfcApp.exe" Name="MfcApp" Description="MFCアプリ" Advertise="yes" Icon="MfcApp.ico" Directory="MenuApp" />
+				<RemoveFolder Id="RemoveDir.MenuApp" Directory="MenuApp" On="uninstall" />
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+	<Fragment>
+		<Icon Id="MfcApp.ico" SourceFile="$(var.MfcApp.ProjectDir)res\MfcApp.ico" />
+		<Icon Id="MfcAppDoc.ico" SourceFile="$(var.MfcApp.ProjectDir)res\MfcAppDoc.ico" />
+	</Fragment>
+</Wix>

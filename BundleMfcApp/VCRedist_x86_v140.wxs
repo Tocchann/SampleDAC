@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Fragment>
+		<?define CurrentVCRedist_Version = "v14.0.23918.0"?>
+		<util:ProductSearch Id="SearchInstalled_VCRedist_x86_v140" Variable="VCRedist_x86_v140"
+												UpgradeCode="{65E5BD06-6392-3027-8C26-853107D3CF1A}" Result="version" />
+		<PackageGroup Id="VCRedist_x86_v140">
+			<ExePackage Id="VCRedist_x86_v140" Name="Package\VC_redist.x86.exe" SourceFile="VC_redist.x86.exe"
+									DownloadUrl="http://go.microsoft.com/fwlink/?LinkID=615459&amp;clcid=0x409"
+									DetectCondition="VCRedist_x86_v140 &gt;= $(var.CurrentVCRedist_Version)" Permanent="yes" PerMachine="yes" Cache="no" Vital="yes"
+									LogPathVariable="VCRedist_x86_v140_log" DisplayName="Microsoft Visual C++ 2015 Redistributable (x86) - 14.0.23918" Protocol="burn" />
+		</PackageGroup>
+	</Fragment>
+</Wix>
