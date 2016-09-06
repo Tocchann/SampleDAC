@@ -14,7 +14,7 @@
 
 		<Feature Id="ProductFeature" Title="SetupMfcApp" Level="1">
 			<ComponentGroupRef Id="ProductComponents" />
-			<FeatureRef Id="VCRuntime.$(var.Platform)" />
+			<!--<FeatureRef Id="VCRuntime.$(var.Platform)" />-->
 		</Feature>
 	</Product>
 
