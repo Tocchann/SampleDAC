@@ -382,11 +382,12 @@ void CMfcAppView::OnListupKnownfolderid()
 	CPath	path;
 	path.Combine( dataFolderPath, _T("KnownFolderIDs.txt") );
 	TRY{
+		//	UNICODEÇ≈ï€ë∂ÅB
 		CFile	file;
 		file.Open( path, CFile::modeReadWrite|CFile::shareDenyWrite|CFile::modeCreate );
 		wchar_t bom = 0xFEFF;
-		file.Write( &bom, sizeof( wchar_t ) );
-		file.Write( (LPCTSTR)value, value.GetLength()*sizeof(TCHAR) );
+		file.Write( &bom, sizeof(wchar_t) );
+		file.Write( static_cast<const wchar_t*>(value), value.GetLength()*sizeof(wchar_t) );
 	}
 	CATCH_ALL(e)
 	{

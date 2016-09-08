@@ -267,7 +267,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDR_MAINFRAME           "MfcApp\n\nMfcApp\nMfcApp Files (*.mfcapp)\n.mfcapp\nMfcApp.Document\nMfcApp.Document"
+    IDR_MAINFRAME           "MfcApp\n\nMfcApp\nMfcApp Files (*.mfcapp)\n.mfcapp;*.txt\nMfcApp.Document\nMfcApp.Document"
 END
 
 STRINGTABLE
