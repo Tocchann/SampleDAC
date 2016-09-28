@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
 	<Fragment>
-		<?define CurrentVCRedist_Version = "v14.0.24212.0"?>
+		<?define CurrentVCRedist_Version = "v14.0.24215.2"?>
 		<util:ProductSearch Id="SearchInstalled_VCRedist_x64_v140" Variable="VCRedist_x64_v140"
 												UpgradeCode="{9B0BAA88-E15F-3A1F-ACC0-B206E9DDF71C}" Result="version" />
 		<PackageGroup Id="VCRedist_x64_v140">
-			<ExePackage Id="VCRedist_x64_v140" Name="Package\VC_redist.x64.exe" SourceFile="VC_redist.x64.exe"
+			<ExePackage Id="VCRedist_x64_v140" Name="Package\VC_redist.x64.exe" SourceFile="C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\redist\1033\vcredist_x64.exe"
 									DetectCondition="VCRedist_x64_v140 &gt;= $(var.CurrentVCRedist_Version)" Permanent="yes" PerMachine="yes" Cache="no" Vital="yes"
-									LogPathVariable="VCRedist_x64_v140_log" DisplayName="Microsoft Visual C++ 2015 Redistributable (x64) - 14.0.24212" Protocol="burn" />
+									LogPathVariable="VCRedist_x64_v140_log" DisplayName="Microsoft Visual C++ 2015 Redistributable (x64) - 14.0.24215" Protocol="burn" />
 		</PackageGroup>
 	</Fragment>
 </Wix>

@@ -3,7 +3,7 @@
 
 
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Bundle Name="BundleMfcApp" Version="1.0.0.0" Manufacturer="とっちゃん" UpgradeCode="a802812c-4dbc-4f4d-b4ef-910adf070dcd" Compressed="no">
+	<Bundle Name="BundleMfcApp" Version="1.0.0.0" Manufacturer="とっちゃん" UpgradeCode="a802812c-4dbc-4f4d-b4ef-910adf070dcd" Compressed="yes">
 		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
 
 		<Chain>
